@@ -6,8 +6,25 @@
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 		<script type="text/javascript" src="/js/main.js"></script>
 		<script type="text/javascript">
+			
 			window.onload = function(){
 				startImagePlayer();
+				//加入时间倒计时
+				showTime();
+			}
+
+			/**********时间辅助函数***********/
+			function showTime(){
+				var nowDate = new Date();
+				var endDate = new Date("2017/2/14,00:00:12");
+				var leftTime = parseInt((endDate.getTime()-nowDate.getTime())/1000);
+				var show = document.getElementById('show').getElementsByTagName('i')[0];
+				var day = parseInt(leftTime / (60*60*24));
+				var hour = parseInt(leftTime / (60*60) % 24);
+				var minute = parseInt(leftTime/60 % 60);
+				var second = parseInt(leftTime % 60);
+				show.innerHTML = day+'天'+hour+'小时'+minute+'分'+second+'秒';
+				setTimeout(showTime,500);
 			}
 		</script>
 	</head>
@@ -34,7 +51,9 @@
 			<img src="image/a1.JPG" data-index="0" style="display: none; width: 30%;margin: 0 auto;">
 		</div>
 		
-		<div id = "show">显示时间的位置</div>
+		<div id = "show">网站维护倒计时：
+			<i>显示时间</i>
+		</div>
 
 		<!-- 添加脚注 -->
 		<footer class = "footer">
