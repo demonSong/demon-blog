@@ -1,11 +1,7 @@
-window.onload = function(){
-	//实现照片轮播
-	clearInterval(timer);
-	setInterval(imagePlayer,150);
-}
-
 var index = -1,
 	timer = null;
+
+
 function imagePlayer(){
 	var image = document.getElementsByTagName('img');
 	index ++;
@@ -24,4 +20,10 @@ function clearImage(image){
 		}
 		image[i].style.display = "none";
 	}
+}
+
+function startImagePlayer(){
+	//实现照片轮播
+	clearInterval(timer);
+	setInterval(imagePlayer,150);
 }
