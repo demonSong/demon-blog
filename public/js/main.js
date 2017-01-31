@@ -5,7 +5,7 @@ var index = -1,
 function imagePlayer(){
 	var image = document.getElementsByTagName('img');
 	index ++;
-	if(index == image.length -1){
+	if(index == image.length){
 		index = 0;
 	}
 	clearImage(image);
@@ -28,14 +28,3 @@ function startImagePlayer(){
 	setInterval(imagePlayer,150);
 }
 
-/**********时间辅助函数***********/
-
-
-function showTime(leftTime,object){
-	var day = parseInt(leftTime / (60*60*24));
-	var hour = parseInt(leftTime / (60*60) % 24);
-	var minute = parseInt(leftTime/60 % 60);
-	var second = parseInt(leftTime % 60);
-	object.innerHTML = day+'天'+hour+'小时'+minute+'分'+second+'秒';
-	setTimeout(showTime,500);
-}
