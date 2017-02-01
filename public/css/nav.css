@@ -1,0 +1,196 @@
+@charset "UTF-8"
+body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,blockquote {
+	margin:0;
+	padding:0;
+}
+img {
+	border:0
+}
+ul,ol,li,form,dl {
+	list-style:none
+}
+a {
+	text-decoration:none;
+	color:#333
+}
+a:hover {
+	color:#f70
+}
+TD {
+	color:#777;
+	font-size:12px;
+	padding:10px
+}
+html {
+	font-size:18px
+}
+
+
+.app_nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.nav_body{
+	position: absolute;
+	border-top: 2px solid #f70;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 48px;
+	background: #fff;
+	box-shadow: 0 0 5px #5a5a5a
+}
+
+.grid-row{
+	width: 1500px;
+	position: relative;
+	margin: auto;
+}
+
+/*导航栏各菜单样式 ul li的margin 和 padding 都需要清空*/
+.nav{
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.nav li{
+	float: left
+}
+
+.nav li.cur a{
+	color: #f70
+}
+
+.nav li a{
+	display: block;
+	height: 48px;
+	padding: 0 15px;
+	outline: 0;
+	overflow: hidden;
+	line-height: 48px;
+	color: #7d7373;
+	font-weight: bold;
+	text-align: center;
+	font-size: 16px;
+	transition:all .2s linear;
+	-moz-transition:all .2s linear;
+	-webkit-transition:all .2s linear;
+	-o-transition:all .2s linear
+}
+
+.nav li a span{
+	display: inline-block;
+	vertical-align: middle;
+	height: 30px;
+	line-height: 30px;
+}
+
+.nav li a:hover{
+	color: #f70;
+}
+
+.side{
+	float: right;
+	height: 48px;
+	font-size: 0;
+	padding: 0;
+}
+
+.side li{
+	display: inline-block;
+	height: 48px;
+	line-height: 48px;
+	padding: 0 10px;
+}
+
+.side li a{
+	font-size: 14px;
+	color: #7d7373;
+	font-weight: bold;
+}
+
+
+/*当屏幕大小小于1550px时，调整grid-row的宽度*/
+@media screen and (max-width: 1550px){
+	html{
+		font-size: 16px;
+	}
+	.grid-row{
+		width: 1200px;
+	}
+}
+
+/*适应手机屏幕大小*/
+@media screen and (max-width: 650px){
+	.grid-row{
+		width: 100%;
+	}
+}
+
+
+/**文章正文设置**/
+.app_container {
+	position: relative;
+	overflow: hidden;
+}
+
+.gallayer{
+	position: fixed;
+	z-index: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-size: cover;
+}
+
+.gallayer:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url(/image/mask_f70d8a0.png);
+}
+.indeCnt section{
+	position: relative;
+	font-size: 1rem;
+}
+
+.index-aboutme{
+	padding:25vh 0 26vh;
+	text-align: center;
+	overflow: hidden;
+}
+
+.index-aboutme h3{
+	margin-bottom: .5em;
+	line-height: 1em;
+	font-size: 1.6em;
+	font-weight: 500;
+}
+
+.index-aboutme p{
+	margin-bottom: 2em;
+	font-size: 1.1em;
+}
+
+.index-aboutme .avatar{
+	width: 150px;
+	height: 150px;
+	margin: 0 auto 1.5em;
+	border-radius: 100%;
+	border: 5px solid #fff;
+	background: url(/image/avatar.jpg) #fff;
+	transition:all .4s ease-out;
+	-moz-transition:all .4s ease-out;
+	-webkit-transition:all .4s ease-out;
+	-o-transition:all .4s ease-out
+}
