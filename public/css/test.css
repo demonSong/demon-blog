@@ -1537,7 +1537,8 @@ body:before {
 	.sidebar {
 	padding-top:20px
 }
-}.define-scrollbar::-webkit-scrollbar {
+}
+.define-scrollbar::-webkit-scrollbar {
 	width:6px;
 	height:6px
 }

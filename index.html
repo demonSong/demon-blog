@@ -3,31 +3,8 @@
 	<head>
 		<title>小宋元宝的小站</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
 		<link rel="stylesheet" type="text/css" href="/css/nav.css">
-		<script type="text/javascript" src="/js/main.js"></script>
-		<script type="text/javascript">
-			
-			window.onload = function(){
-				startImagePlayer();
-				//加入时间倒计时
-				showTime();
-			}
-
-			/**********时间辅助函数***********/
-			function showTime(){
-				var nowDate = new Date();
-				var endDate = new Date("2017/2/14,00:00:12");
-				var leftTime = parseInt((endDate.getTime()-nowDate.getTime())/1000);
-				var show = document.getElementById('show').getElementsByTagName('i')[0];
-				var day = parseInt(leftTime / (60*60*24));
-				var hour = parseInt(leftTime / (60*60) % 24);
-				var minute = parseInt(leftTime/60 % 60);
-				var second = parseInt(leftTime % 60);
-				show.innerHTML = day+'天'+hour+'小时'+minute+'分'+second+'秒';
-				setTimeout(showTime,500);
-			}
-		</script>
+	
 	</head>
 	<body class="define-scrollbar">
 
@@ -45,8 +22,8 @@
 						<li page = "blog">
 							<a href="/blog/"><span>博客</span></a>
 						</li>
-						<li page = "labs">
-							<a href="/labs/"><span>实验室</span></a>
+						<li page = "algorithm">
+							<a href="/algorithm/"><span>算法基地</span></a>
 						</li>
 						<li page = "bless">
 							<a href="/bless"><span>留言</span></a>
@@ -75,13 +52,15 @@
 		</div>
 
 		<!-- 添加脚注 -->
-		<footer class = "footer" style="display: none">
-			<div clss = "fcode">
-				<p>© 2017 
-					<a href="http://www.hankcs.com">Demon Song</a> &nbsp; 
-					<a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备16042365号-1</a>
-				</p>
+		<div class ="app-footer">
+			<div class="grid-row">
+				<div class = "grid-box-full">
+					<p>design & code by @小宋元宝. Base on nodeJS + mongoDB</p>
+					<p>© 2017 &nbsp;
+						<a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备16042365号-1</a>
+					</p>
+				</div>
 			</div>
-		</footer>
+		</div>
 	</body>
 </html>
