@@ -139,6 +139,10 @@ a,a:active {
 	color: #7d7373;
 }
 
+.side li a:hover{
+	color: #f70;
+}
+
 
 /*当屏幕大小小于1550px时，调整grid-row的宽度*/
 @media screen and (max-width: 1550px){
