@@ -225,6 +225,56 @@ a,a:active {
 	-webkit-transform:rotate(200deg)
 }
 
+
+.index-aboutme .my-sns-links a{
+	display: inline-block;
+	vertical-align: middle;
+	width: 2.2em;
+	height: 2.2em;
+	margin: 0 5px;
+	line-height: 2.2em;
+	border: 1px solid rgba(0,0,0,.8);
+	border-radius: 100%;
+	font-size: 1.3em;
+	color: #000;
+	opacity: .7;
+	transition:all .2s ease;
+	-moz-transition:all .2s ease;
+	-webkit-transition:all .2s ease;
+	-o-transition:all .2s ease
+}
+
+.index-aboutme .my-sns-links a:hover {
+	opacity:1
+}
+
+.l-icon{
+	font-family: layIcon;
+	font-style: normal;
+}
+
+.l-icon-git:after {
+	content:'\0054'
+}
+
+
+.l-icon-zhihu:after {
+	content:'\0069'
+}
+
+.l-icon-dribbble:after {
+	content:'\006a'
+}
+
+@font-face {
+	font-family:layIcon;
+	src:url(//dn-lay.qbox.me/build/single-page/fonts/layicon-webfont_94c03fc.eot?v=3);
+	src:url(//dn-lay.qbox.me/build/single-page/fonts/layicon-webfont_94c03fc.eot?v=3#iefix) format("embedded-opentype"),url(//dn-lay.qbox.me/build/single-page/fonts/layicon-webfont_e62b79d.woff?v=3) format('woff'),url(//dn-lay.qbox.me/build/single-page/fonts/layicon-webfont_54d75ce.ttf?v=3) format("truetype"),url(//dn-lay.qbox.me/build/single-page/fonts/layicon-webfont_939fbba.svg?v=3#layicon-webfont) format("svg");
+	font-weight:400;
+	font-style:normal
+}
+
+
 /**脚注样式**/
 .app-footer{
 	position: relative;
