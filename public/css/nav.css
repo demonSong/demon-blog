@@ -95,7 +95,7 @@ a,a:active {
 	float: left
 }
 
-.nav li.cur a{
+.nav li a.cur{
 	color: #f70
 }
 
