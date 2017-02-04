@@ -46,6 +46,12 @@ body {
 	-webkit-font-smoothing:antialiased;
 }
 
+body:before{
+	content: '';
+	display: block;
+	height: 50px;
+}
+
 a,a:active {
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
 	-webkit-tap-highlight-color:transparent
@@ -270,6 +276,11 @@ a,a:active {
 	content:'\006a'
 }
 
+.l-icon-layLogo:after {
+	content:'\0049'
+}
+
+
 @font-face {
 	font-family:layIcon;
 	src:url(//dn-lay.qbox.me/build/single-page/fonts/layicon-webfont_94c03fc.eot?v=3);
@@ -313,4 +324,139 @@ a,a:active {
 	color: #FFF;
 	text-decoration: underline;
 }
+
+/**blog下的样式配置**/
+
+.articleListPage{
+	min-height: 600px;
+	padding-bottom: 20px;
+	background: #aaa;
+}
+
+.header{
+	position: relative;
+	padding: 30px 0 20px;
+	background: #fafafa;
+}
+
+.header:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	background: #fff;
+	background-image: linear-gradient(#fafafa,#fff);
+}
+
+.logo{
+	font-size: 3.5rem;
+	color: #000;
+	margin-bottom: 10px;
+}
+
+.mac{
+	position: relative;
+	margin: auto;
+	padding-top: 1.5rem;
+	width: 15rem;
+	height: 7.5rem;
+	text-align: center;
+	background: linear-gradient(to right bottom,#fff,#eee);
+	border: 6px solid #222;
+	border-width: 6px 6px 8px;
+	border-radius: 8px 8px 0 0;
+}
+
+.mac:after{
+	content: '';
+	position: absolute;
+	width: 134%;
+	left: -17%;
+	bottom: -14px;
+	height: 6px;
+	border-radius: 0 0 40px 40px / 0 0 5px 5px;
+	background: #ccc;
+}
+
+.mac p{
+	font-size: 1rem;
+	color: #333;
+}
+
+
+
+/**标签样式定义**/
+.articleListPage-tags-cnt{
+	margin-bottom: 20px;
+}
+
+.articleListPage-tags{
+	width: 100%;
+	background: #fff;
+	box-shadow: 0 1px 0 rgba(0,0,0,.2);
+	z-index: 5;
+}
+
+.abstract{
+	padding: 12px 0 5px 5px;
+}
+
+.abstract a.active{
+	background: #f70;
+	color: #FFF;
+}
+
+.abstract a{
+	position: relative;
+	display: inline-block;
+	max-width: 100%;
+	height: 24px;
+	margin: 0 10px 5px 0;
+	line-height: 24px;
+	padding: 0 8px 0 18px;
+	border-radius: 0 4px 4px 0;
+	font-size: 12px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.abstract a:hover{
+	background: #333;
+	color: #fff;
+}
+
+.abstract a span{
+	opacity: .3;
+	padding: 0 0 0 5px;
+}
+
+.abstract a:before{
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-width: 12px 12px 12px 0;
+	border-color: #fff transparent;
+	border-style: solid;
+}
+
+.abstract a:after{
+	position: absolute;
+	content: '';
+	width: 4px;
+	height: 4px;
+	top: 10px;
+	left: 8px;
+	border-radius: 100%;
+	background: #fff;
+}
+
 
