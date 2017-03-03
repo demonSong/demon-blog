@@ -25,6 +25,14 @@ html {
 	font-size:18px
 }
 
+p{
+	display: block;
+	-webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
 /**定义滚动条样式**/
 .define-scrollbar::-webkit-scrollbar{
 	width: 6px;
@@ -459,4 +467,81 @@ a,a:active {
 	background: #fff;
 }
 
+/**文章内容样式定义**/
+.articleItem .info{
+	padding: 10px 20px;
+	line-height: 1.4;
+	font-size: 13px;
+	color: #888;
+	text-indent: 2em;
+}
 
+.articleItem .title{
+	display: block;
+	padding: 1em .5em .2em;
+	font-weight: 400;
+	line-height: 1.5em;
+	text-align: center;
+	font-size: 18px;
+	color: #000;
+	outline: 0;
+}
+
+.articleItem .link{
+	display: block;
+}
+
+/**footer 脚注样式定义**/
+.articleItem footer .time{
+	display: table-cell;
+	vertical-align: middle;
+	width: 1%;
+	padding-right: 10px;
+	white-space: nowrap;
+	color: #888;
+	font-size: 12px;
+}
+
+.articleItem footer .tags a{
+	display: inline-block;
+	margin-right: 5px;
+	color: #777;
+}
+
+.articleItem footer .tags a:hover{
+	text-decoration: underline;
+	color: #000;
+}
+
+.articleItem footer .tags strong{
+	margin-right: 5px;
+	color: #aaa;
+	font-weight: 400;
+}
+
+.articleItem footer .tags{
+	display: table-cell;
+	width: 99%;
+	padding-left: 10px;
+	font-size: 13px;
+}
+
+.articleItem footer{
+	display: table;
+	width: 100%;
+	padding: 10px 0;
+	border-top: 1px solid #e8e8e8;
+	background: #fbfbfb;
+}
+
+/**整体样式定义**/
+.articleItem.pure-text .link{
+	background: url(/image/blog_card_1f52c08.jpg) no-repeat top right #fff;
+	background-size: 170px 34px;
+}
+
+.articleItem {
+	margin-bottom: 10px;
+	overflow: hidden;
+	background: #fff;
+}
